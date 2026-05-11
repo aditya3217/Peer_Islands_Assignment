@@ -50,7 +50,7 @@ def main():
         "files": all_data
     }
 
-    with open("output/analysis_output_final.json.json", "w") as f:
+    with open("output/analysis_output_final.json", "w") as f:
         json.dump(final_output, f, indent=2)
 
     print("Final output generated: analysis_output_final.json")
