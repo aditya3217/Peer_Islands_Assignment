@@ -1,0 +1,190 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+    "class_name": "FilmDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@JsonSerialize",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "areAllFieldsNull",
+        "signature": "public boolean areAllFieldsNull()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "title",
+      "description",
+      "releaseYear",
+      "languageId",
+      "originalLanguageId",
+      "rentalDuration",
+      "rentalRate",
+      "length",
+      "replacementCost",
+      "rating",
+      "lastUpdate",
+      "specialFeatures"
+    ],
+    "complexity_score": 5,
+    "complexity_notes": "Multiple fields and nested classes increase complexity.",
+    "summary": "DTO for Film data with nested classes for requests and responses."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+    "class_name": "ActorEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ColumnDefault",
+      "@NotNull",
+      "@Getter",
+      "@Table",
+      "@ToString",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Entity",
+      "@GeneratedValue",
+      "@Basic",
+      "@Override",
+      "@Index",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@Id",
+      "@Embedded",
+      "@AllArgsConstructor",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(ActorEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "actorId",
+      "fullName",
+      "lastUpdate"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Basic entity with common fields and methods.",
+    "summary": "Entity representing an actor with updates and default values."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+    "class_name": "CategoryEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@NotNull",
+      "@ColumnDefault",
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Table",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Entity",
+      "@GeneratedValue",
+      "@Basic",
+      "@Override",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@Size",
+      "@Id",
+      "@AllArgsConstructor",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(CategoryEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "categoryId",
+      "name",
+      "lastUpdate"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Basic entity that is straightforward with common fields.",
+    "summary": "Entity representing a category with fields and update capabilities."
+  }
+]

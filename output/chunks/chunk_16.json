@@ -1,0 +1,245 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/service/PaymentServiceImpl.java",
+    "class_name": "PaymentServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "deletePayment",
+        "signature": "public void deletePayment(Integer paymentId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getPaymentList",
+        "signature": "public List<PaymentDto.Payment> getPaymentList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      },
+      {
+        "name": "getPayment",
+        "signature": "public Optional<PaymentDto.Payment> getPayment(Integer paymentId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      },
+      {
+        "name": "getPaymentDetailsList",
+        "signature": "public List<PaymentDto.Payment> getPaymentDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      },
+      {
+        "name": "getPaymentDetails",
+        "signature": "public Optional<PaymentDto.Payment> getPaymentDetails(Integer paymentId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      },
+      {
+        "name": "createPayment",
+        "signature": "public PaymentDto.Payment createPayment(PaymentDto.PaymentRequest model, CustomerDto.Customer customer, StaffDto.Staff staff, RentalDto.Rental rental)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      },
+      {
+        "name": "updatePayment",
+        "signature": "public PaymentDto.Payment updatePayment(Integer paymentId, PaymentDto.PaymentRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "@Override"
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 5,
+    "complexity_notes": "Multiple methods and dependencies.",
+    "summary": "Service implementation for managing payment operations."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/assembler/RentalRepresentationModelAssembler.java",
+    "class_name": "RentalRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Assembler for rental representation model."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/controller/RentalController.java",
+    "class_name": "RentalController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@PutMapping",
+      "@ModelAttribute",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "rentDvd",
+        "signature": "public ResponseEntity<Void> rentDvd(@RequestBody RentalDto.RentalCreateRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateRental",
+        "signature": "public ResponseEntity<Void> updateRental(@PathVariable Integer rentalId, @ModelAttribute RentalDto.RentalUpdateRequest model)",
+        "http_method": "PUT",
+        "path": "/{rentalId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteRental",
+        "signature": "public ResponseEntity<Void> deleteRental(@PathVariable Integer rentalId)",
+        "http_method": "DELETE",
+        "path": "/{rentalId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "returnDvd",
+        "signature": "public ResponseEntity<Void> returnDvd(@RequestBody Map<String, String> input)",
+        "http_method": "PUT",
+        "path": "/return",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getRental",
+        "signature": "public ResponseEntity<RentalDto.RentalResponse> getRental(@PathVariable Integer rentalId)",
+        "http_method": "GET",
+        "path": "/{rentalId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getRentalList",
+        "signature": "public ResponseEntity<CollectionModel<RentalDto.RentalResponse>> getRentalList(@PageableDefault(size = 10, page = 0, direction = Sort.Direction.ASC) Pageable pageable)",
+        "http_method": "GET",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 6,
+    "complexity_notes": "Handles multiple HTTP methods and has several mappings.",
+    "summary": "Controller for handling rental operations."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+    "class_name": "RentalDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "visibility": "public",
+        "signature": "public boolean equals(Object o)"
+      },
+      {
+        "name": "hashCode",
+        "visibility": "public",
+        "signature": "public int hashCode()"
+      },
+      {
+        "name": "equals",
+        "visibility": "public",
+        "signature": "public boolean equals(Object o)"
+      },
+      {
+        "name": "hashCode",
+        "visibility": "public",
+        "signature": "public int hashCode()"
+      },
+      {
+        "name": "equals",
+        "visibility": "public",
+        "signature": "public boolean equals(Object o)"
+      },
+      {
+        "name": "hashCode",
+        "visibility": "public",
+        "signature": "public int hashCode()"
+      },
+      {
+        "name": "equals",
+        "visibility": "public",
+        "signature": "public boolean equals(Object o)"
+      },
+      {
+        "name": "hashCode",
+        "visibility": "public",
+        "signature": "public int hashCode()"
+      }
+    ],
+    "http_mappings": [],
+    "dependencies": [
+      "rentalId",
+      "rentalDate",
+      "inventoryId",
+      "customerId",
+      "returnDate",
+      "staffId",
+      "lastUpdate",
+      "storeId",
+      "filmId"
+    ],
+    "complexity_score": 4,
+    "complexity_notes": "Includes multiple DTOs and utility methods.",
+    "summary": "Data Transfer Object for rental operations."
+  }
+]

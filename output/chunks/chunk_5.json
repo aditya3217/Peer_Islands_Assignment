@@ -1,0 +1,213 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+    "class_name": "ActorDetailsDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "actorId",
+      "firstName",
+      "lastName",
+      "filmInfo",
+      "actorDetailsModel"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+    "class_name": "ActorDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@JsonTypeInfo",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "actorId",
+      "fullName",
+      "lastUpdate",
+      "firstName",
+      "lastName",
+      "actor"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/dto/CategoryDto.java",
+    "class_name": "CategoryDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@AllArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "name",
+      "lastUpdate"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+    "class_name": "FilmDetailsDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "title",
+      "description",
+      "category",
+      "price",
+      "length",
+      "rating",
+      "actors",
+      "filmDetails"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  }
+]

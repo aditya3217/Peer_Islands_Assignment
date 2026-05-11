@@ -1,0 +1,100 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/SpringRestSakilaApplication.java",
+    "class_name": "SpringRestSakilaApplication",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@SpringBootApplication"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Main application class for Spring Boot application."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/Category.java",
+    "class_name": "Category",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Contains multiple constants and mappings.",
+    "summary": "Enumeration for different categories with finders mapped by ID and category name."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/Country.java",
+    "class_name": "Country",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [
+      {
+        "name": "replaceCountryIdToCountryInString",
+        "signature": "public static String replaceCountryIdToCountryInString(String str)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Replaces numeric country ID in string with the corresponding country name."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Includes logic for string replacement based on country ID.",
+    "summary": "Enumeration for different countries and their properties."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/ErrorCode.java",
+    "class_name": "ErrorCode",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Enumeration for different error codes and their associated metadata."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/ErrorLevel.java",
+    "class_name": "ErrorLevel",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Enumeration for different error levels used in the application."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/FilmRating.java",
+    "class_name": "FilmRating",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Includes ratings for films with associated constants.",
+    "summary": "Enumeration for different film ratings with helper mappings."
+  }
+]

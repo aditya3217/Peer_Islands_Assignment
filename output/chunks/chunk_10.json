@@ -1,0 +1,198 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/assembler/CustomerDetailsRepresentationModelAssembler.java",
+    "class_name": "CustomerDetailsRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/assembler/CustomerRepresentationModelAssembler.java",
+    "class_name": "CustomerRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+    "class_name": "CustomerController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@RequestParam",
+      "@PutMapping",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "addCustomer",
+        "signature": "public ResponseEntity<Void> addCustomer(@RequestBody CustomerDto.CustomerRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateCustomer",
+        "signature": "public ResponseEntity<Void> updateCustomer(@PathVariable Integer customerId, @RequestBody CustomerDto.CustomerRequest model)",
+        "http_method": "PUT",
+        "path": "/{customerId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteCustomer",
+        "signature": "public ResponseEntity<Void> deleteCustomer(@PathVariable Integer customerId)",
+        "http_method": "DELETE",
+        "path": "/{customerId}",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+    "class_name": "CustomerDetailsDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "id",
+      "name",
+      "address",
+      "zipCode",
+      "phone",
+      "city",
+      "country",
+      "notes",
+      "sid",
+      "customerDetailsModel"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+    "class_name": "CustomerDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@JsonTypeInfo",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "customerId",
+      "storeId",
+      "fullName",
+      "addressId",
+      "active",
+      "authorityId",
+      "createDate",
+      "lastUpdate",
+      "storeId",
+      "firstName",
+      "lastName",
+      "addressId",
+      "active",
+      "authorityId",
+      "customer"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  }
+]

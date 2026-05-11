@@ -1,0 +1,237 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+    "class_name": "CustomerEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Embedded",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(CustomerEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "customerId",
+      "storeId",
+      "fullName",
+      "addressId",
+      "active",
+      "authorityId",
+      "createDate",
+      "lastUpdate",
+      "storeByStoreId",
+      "addressByAddressId",
+      "authorityByAuthorityId"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Contains multiple fields, complex data types, and has significant annotations.",
+    "summary": "Represents the Customer entity with fields like customerId, storeId, addressId, and others."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/domain/mapper/CustomerMapper.java",
+    "class_name": "CustomerMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping",
+      "@Override"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple interface without methods relevant to HTTP requests.",
+    "summary": "Mapper interface for converting between CustomerEntity and CustomerDto."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/repository/CustomerRepository.java",
+    "class_name": "CustomerRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface extending JpaRepository.",
+    "summary": "Repository interface for CustomerEntity."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepository.java",
+    "class_name": "CustomCustomerRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "No annotations; simple interface without methods.",
+    "summary": "Custom repository interface for advanced queries on Customer entity."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepositoryImpl.java",
+    "class_name": "CustomCustomerRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "findAllCustomerDetailsList",
+        "signature": "public List<CustomerDetailsDto.CustomerDetails> findAllCustomerDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findCustomerDetailsById",
+        "signature": "public Optional<CustomerDetailsDto.CustomerDetails> findCustomerDetailsById(Integer customerId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllCustomerPaymentListByIdWithCondition",
+        "signature": "public List<PaymentDto.Payment> findAllCustomerPaymentListByIdWithCondition(Integer customerId, LocalDate startDate, LocalDate endDate)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllCustomerRentalListByIdWithCondition",
+        "signature": "public List<RentalDto.Rental> findAllCustomerRentalListByIdWithCondition(Integer customerId, RentalStatus status, LocalDate startDate, LocalDate endDate)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Multiple methods with complex query logic.",
+    "summary": "Implementation of CustomCustomerRepository for fetching Customer details."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/service/CustomerService.java",
+    "class_name": "CustomerService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Defines service methods without implementation.",
+    "summary": "Service interface for operations related to Customer."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/customer/service/CustomerServiceImpl.java",
+    "class_name": "CustomerServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "deleteCustomer",
+        "signature": "public void deleteCustomer(Integer customerId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 5,
+    "complexity_notes": "Contains multiple service methods and transaction management.",
+    "summary": "Service implementation for managing Customer entities."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/assembler/AddressRepresentationModelAssembler.java",
+    "class_name": "AddressRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Assembles Address representation models.",
+    "summary": "Assembler for converting AddressDto to representation model."
+  }
+]

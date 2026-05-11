@@ -1,0 +1,436 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/HalRelation.java",
+    "class_name": "HalRelation",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@NoArgsConstructor",
+      "@FieldNameConstants"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [
+      "self",
+      "create",
+      "update",
+      "delete",
+      "details",
+      "actor",
+      "actorList",
+      "film",
+      "filmList",
+      "customer",
+      "customerList",
+      "address",
+      "addressList",
+      "city",
+      "cityList",
+      "payment",
+      "paymentList",
+      "rental",
+      "rentalList",
+      "staff",
+      "staffList",
+      "store",
+      "storeList",
+      "categorySales",
+      "storeSales"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/Language.java",
+    "class_name": "Language",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/constant/SpecialFeature.java",
+    "class_name": "SpecialFeature",
+    "layer": "other",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/dto/ErrorResponseDto.java",
+    "class_name": "ErrorResponseDto",
+    "layer": "dto",
+    "class_type": "class",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/dto/FullName.java",
+    "class_name": "FullName",
+    "layer": "dto",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Setter",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@AllArgsConstructor"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [
+      "firstName",
+      "lastName"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/dto/NullCheckable.java",
+    "class_name": "NullCheckable",
+    "layer": "dto",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/dto/Updatable.java",
+    "class_name": "Updatable",
+    "layer": "dto",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/entity/FullName.java",
+    "class_name": "FullName",
+    "layer": "entity",
+    "class_type": "class",
+    "annotations": [
+      "@NotNull",
+      "@NoArgsConstructor",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@Basic",
+      "@Size",
+      "@Embeddable",
+      "@AllArgsConstructor",
+      "@Column"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [
+      "firstName",
+      "lastName"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/mapper/DoMapping.java",
+    "class_name": "DoMapping",
+    "layer": "other",
+    "class_type": "interface",
+    "annotations": [
+      "@Retention",
+      "@interface",
+      "@Target",
+      "@Qualifier"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/mapper/FullNameMapper.java",
+    "class_name": "FullNameMapper",
+    "layer": "other",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/mapper/GenericMapper.java",
+    "class_name": "GenericMapper",
+    "layer": "other",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+    "class_name": "NullToEmptyStringSerializer",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@Serial",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "serialize",
+        "signature": "public void serialize(Object value, JsonGenerator gen, SerializerProvider provider) throws IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "serializeWithType",
+        "signature": "public void serializeWithType(Object value, JsonGenerator gen, SerializerProvider serializers, TypeSerializer typeSer) throws IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getSchema",
+        "signature": "public JsonNode getSchema(SerializerProvider provider, Type typeHint)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "acceptJsonFormatVisitor",
+        "signature": "public void acceptJsonFormatVisitor(JsonFormatVisitorWrapper visitor, JavaType typeHint) throws JsonMappingException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/exception/GlobalExceptionHandler.java",
+    "class_name": "GlobalExceptionHandler",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@Slf4j",
+      "@ControllerAdvice",
+      "@ExceptionHandler"
+    ],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/exception/ResourceNotAvailableException.java",
+    "class_name": "ResourceNotAvailableException",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/exception/ResourceNotFoundException.java",
+    "class_name": "ResourceNotFoundException",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [],
+    "methods": [],
+    "http_method": null,
+    "path": null,
+    "visibility": "",
+    "description": "",
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/filter/MdcLoggingFilter.java",
+    "class_name": "MdcLoggingFilter",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "doFilter",
+        "signature": "public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/security/JwtAuthenticationFilter.java",
+    "class_name": "JwtAuthenticationFilter",
+    "layer": "security",
+    "class_type": "class",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Component",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "doFilterInternal",
+        "signature": "protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "protected",
+        "description": ""
+      },
+      {
+        "name": "shouldNotFilter",
+        "signature": "protected boolean shouldNotFilter(HttpServletRequest request)",
+        "http_method": null,
+        "path": null,
+        "visibility": "protected",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/security/JwtAuthenticationProvider.java",
+    "class_name": "JwtAuthenticationProvider",
+    "layer": "security",
+    "class_type": "class",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Component",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "authenticate",
+        "signature": "public Authentication authenticate(Authentication authentication) throws AuthenticationException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "supports",
+        "signature": "public boolean supports(Class<?> authentication)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  }
+]

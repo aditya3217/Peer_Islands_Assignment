@@ -1,0 +1,414 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/security/JwtAuthenticationToken.java",
+    "class_name": "JwtAuthenticationToken",
+    "layer": "security",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "getCredentials",
+        "signature": "public Object getCredentials()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getPrincipal",
+        "signature": "public Object getPrincipal()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/security/JwtTokenProvider.java",
+    "class_name": "JwtTokenProvider",
+    "layer": "security",
+    "class_type": "class",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Value",
+      "@Component",
+      "@PostConstruct"
+    ],
+    "methods": [
+      {
+        "name": "init",
+        "signature": "public void init()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "createToken",
+        "signature": "public String createToken(UserDetails user)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "decodeToken",
+        "signature": "public Claims decodeToken(String token)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "key",
+      "signingKey"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/common/util/ExpressionUtils.java",
+    "class_name": "ExpressionUtils",
+    "layer": "other",
+    "class_type": "class",
+    "annotations": [
+      "@NoArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/config/AuthConfig.java",
+    "class_name": "AuthConfig",
+    "layer": "config",
+    "class_type": "class",
+    "annotations": [
+      "@Configuration",
+      "@RequiredArgsConstructor",
+      "@Bean"
+    ],
+    "methods": [
+      {
+        "name": "passwordEncoder",
+        "signature": "public PasswordEncoder passwordEncoder()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "authenticationManager",
+        "signature": "public AuthenticationManager authenticationManager()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/config/LoggingFilterConfig.java",
+    "class_name": "LoggingFilterConfig",
+    "layer": "config",
+    "class_type": "class",
+    "annotations": [
+      "@Configuration",
+      "@Order",
+      "@Bean"
+    ],
+    "methods": [
+      {
+        "name": "mdcLoggingFilter",
+        "signature": "public MdcLoggingFilter mdcLoggingFilter()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "commonsRequestLoggingFilter",
+        "signature": "public CommonsRequestLoggingFilter commonsRequestLoggingFilter()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/config/PersistenceConfig.java",
+    "class_name": "PersistenceConfig",
+    "layer": "config",
+    "class_type": "class",
+    "annotations": [
+      "@Configuration",
+      "@PersistenceContext",
+      "@EnableJpaRepositories",
+      "@PersistenceUnit",
+      "@Bean"
+    ],
+    "methods": [
+      {
+        "name": "jpaQueryFactory",
+        "signature": "public JPAQueryFactory jpaQueryFactory()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "sqlQueryFactory",
+        "signature": "public SQLQueryFactory sqlQueryFactory(DataSource dataSource)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "mysqlQueryFactory",
+        "signature": "public MySQLQueryFactory mysqlQueryFactory(DataSource dataSource)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "blazeJPAQueryFactory",
+        "signature": "public BlazeJPAQueryFactory blazeJPAQueryFactory()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "criteriaBuilderFactory",
+        "signature": "public CriteriaBuilderFactory criteriaBuilderFactory()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "entityManagerFactory",
+      "entityManager"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/config/RedisConfig.java",
+    "class_name": "RedisConfig",
+    "layer": "config",
+    "class_type": "class",
+    "annotations": [
+      "@Configuration",
+      "@EnableCaching",
+      "@Bean"
+    ],
+    "methods": [
+      {
+        "name": "redisConnectionFactory",
+        "signature": "public RedisConnectionFactory redisConnectionFactory(RedisProperties redisProperties)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "redisTemplate",
+        "signature": "public RedisTemplate<?, ?> redisTemplate(RedisConnectionFactory redisConnectionFactory)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "redisCacheConfiguration",
+        "signature": "public RedisCacheConfiguration redisCacheConfiguration()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/config/SecurityFilterConfig.java",
+    "class_name": "SecurityFilterConfig",
+    "layer": "config",
+    "class_type": "class",
+    "annotations": [
+      "@Configuration",
+      "@RequiredArgsConstructor",
+      "@EnableMethodSecurity",
+      "@Bean"
+    ],
+    "methods": [
+      {
+        "name": "filterChain",
+        "signature": "public SecurityFilterChain filterChain(HttpSecurity http)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/controller/LoginController.java",
+    "class_name": "LoginController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@PostMapping"
+    ],
+    "methods": [
+      {
+        "name": "userLogin",
+        "signature": "public ResponseEntity<Void> userLogin(@RequestBody AuthorityDto.Login login)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/domain/converter/UserRoleConverter.java",
+    "class_name": "UserRoleConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "public String convertToDatabaseColumn(EnumSet<UserRole> attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "public EnumSet<UserRole> convertToEntityAttribute(String dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+    "class_name": "AuthorityDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Email",
+      "@Override",
+      "@Setter",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@AllArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "authorityId",
+      "email",
+      "password",
+      "email",
+      "password",
+      "email",
+      "password"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "",
+    "summary": ""
+  }
+]

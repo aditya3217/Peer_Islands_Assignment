@@ -1,0 +1,628 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepository.java",
+    "class_name": "CustomFilmRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [
+      {
+        "name": "findAllFilmList",
+        "signature": "List<FilmDto.Film> findAllFilmList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmListWithFilter",
+        "signature": "List<FilmDto.Film> findAllFilmListWithFilter(FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmActorListById",
+        "signature": "List<ActorDto.Actor> findAllFilmActorListById(Integer filmId, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findFilmActorById",
+        "signature": "Optional<ActorDto.Actor> findFilmActorById(Integer filmId, Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmListDetail",
+        "signature": "List<FilmDetailsDto.FilmDetails> findAllFilmListDetail()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findFilmDetailsById",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> findFilmDetailsById(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepositoryImpl.java",
+    "class_name": "CustomFilmRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "findAllFilmList",
+        "signature": "List<FilmDto.Film> findAllFilmList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmListWithFilter",
+        "signature": "List<FilmDto.Film> findAllFilmListWithFilter(FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmActorListById",
+        "signature": "List<ActorDto.Actor> findAllFilmActorListById(Integer filmId, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findFilmActorById",
+        "signature": "Optional<ActorDto.Actor> findFilmActorById(Integer filmId, Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findAllFilmListDetail",
+        "signature": "List<FilmDetailsDto.FilmDetails> findAllFilmListDetail()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "findFilmDetailsById",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> findFilmDetailsById(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Implements multiple methods from the interface.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepository.java",
+    "class_name": "CustomFilmTextRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepositoryImpl.java",
+    "class_name": "CustomFilmTextRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/RentalRateProjection.java",
+    "class_name": "RentalRateProjection",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [
+      {
+        "name": "getRentalRate",
+        "signature": "BigDecimal getRentalRate()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/service/ActorService.java",
+    "class_name": "ActorService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [
+      {
+        "name": "getActorList",
+        "signature": "List<ActorDto.Actor> getActorList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActor",
+        "signature": "Optional<ActorDto.Actor> getActor(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorDetailsList",
+        "signature": "List<ActorDetailsDto.ActorDetails> getActorDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorDetails",
+        "signature": "Optional<ActorDetailsDto.ActorDetails> getActorDetails(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmList",
+        "signature": "List<FilmDto.Film> getActorFilmList(Integer actorId, FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilm",
+        "signature": "Optional<FilmDto.Film> getActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmDetails",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> getActorFilmDetails(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "searchActorList",
+        "signature": "List<ActorDto.Actor> searchActorList(String name)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActor",
+        "signature": "ActorDto.Actor addActor(ActorDto.ActorRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActorFilm",
+        "signature": "FilmDto.Film addActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateActor",
+        "signature": "ActorDto.Actor updateActor(Integer actorId, ActorDto.ActorRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteActor",
+        "signature": "void deleteActor(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "removeActorFilm",
+        "signature": "void removeActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/service/ActorServiceImpl.java",
+    "class_name": "ActorServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Service",
+      "@Override",
+      "@CacheEvict",
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Cacheable",
+      "@CachePut"
+    ],
+    "methods": [
+      {
+        "name": "getActorList",
+        "signature": "List<ActorDto.Actor> getActorList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActor",
+        "signature": "Optional<ActorDto.Actor> getActor(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorDetailsList",
+        "signature": "List<ActorDetailsDto.ActorDetails> getActorDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorDetails",
+        "signature": "Optional<ActorDetailsDto.ActorDetails> getActorDetails(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmList",
+        "signature": "List<FilmDto.Film> getActorFilmList(Integer actorId, FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilm",
+        "signature": "Optional<FilmDto.Film> getActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmDetails",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> getActorFilmDetails(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "searchActorList",
+        "signature": "List<ActorDto.Actor> searchActorList(String name)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActor",
+        "signature": "ActorDto.Actor addActor(ActorDto.ActorRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActorFilm",
+        "signature": "FilmDto.Film addActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateActor",
+        "signature": "ActorDto.Actor updateActor(Integer actorId, ActorDto.ActorRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteActor",
+        "signature": "void deleteActor(Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "removeActorFilm",
+        "signature": "void removeActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Implements multiple methods from interface.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/service/FilmService.java",
+    "class_name": "FilmService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [
+      {
+        "name": "getFilmList",
+        "signature": "List<FilmDto.Film> getFilmList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmListWithFilter",
+        "signature": "List<FilmDto.Film> getFilmList(FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilm",
+        "signature": "Optional<FilmDto.Film> getFilm(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActorList",
+        "signature": "List<ActorDto.Actor> getFilmActorList(Integer filmId, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActor",
+        "signature": "Optional<ActorDto.Actor> getFilmActor(Integer filmId, Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmDetailsList",
+        "signature": "List<FilmDetailsDto.FilmDetails> getFilmDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmDetails",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> getFilmDetails(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmRentalPrice",
+        "signature": "BigDecimal getFilmRentalPrice(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addFilm",
+        "signature": "FilmDto.Film addFilm(FilmDto.FilmRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateFilm",
+        "signature": "FilmDto.Film updateFilm(Integer filmId, FilmDto.FilmRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteFilm",
+        "signature": "void deleteFilm(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/service/FilmServiceImpl.java",
+    "class_name": "FilmServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Service",
+      "@Override",
+      "@CacheEvict",
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Cacheable",
+      "@CachePut"
+    ],
+    "methods": [
+      {
+        "name": "getFilmList",
+        "signature": "List<FilmDto.Film> getFilmList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmListWithFilter",
+        "signature": "List<FilmDto.Film> getFilmList(FilmDto.FilterOption condition, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilm",
+        "signature": "Optional<FilmDto.Film> getFilm(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActorList",
+        "signature": "List<ActorDto.Actor> getFilmActorList(Integer filmId, Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActor",
+        "signature": "Optional<ActorDto.Actor> getFilmActor(Integer filmId, Integer actorId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmDetailsList",
+        "signature": "List<FilmDetailsDto.FilmDetails> getFilmDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmDetails",
+        "signature": "Optional<FilmDetailsDto.FilmDetails> getFilmDetails(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmRentalPrice",
+        "signature": "BigDecimal getFilmRentalPrice(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addFilm",
+        "signature": "FilmDto.Film addFilm(FilmDto.FilmRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateFilm",
+        "signature": "FilmDto.Film updateFilm(Integer filmId, FilmDto.FilmRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteFilm",
+        "signature": "void deleteFilm(Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Implements multiple methods from interface.",
+    "summary": ""
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/assembler/CityRepresentationModelAssembler.java",
+    "class_name": "CityRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/controller/LocationController.java",
+    "class_name": "LocationController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@PutMapping",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "getAddressList",
+        "signature": "ResponseEntity<CollectionModel<AddressDto.AddressResponse>> getAddressList(Pageable pageable)",
+        "http_method": "GET",
+        "path": "/addresses",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addAddress",
+        "signature": "ResponseEntity<Void> addAddress(AddressDto.AddressRequest model)",
+        "http_method": "POST",
+        "path": "/addresses",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getAddress",
+        "signature": "ResponseEntity<AddressDto.AddressResponse> getAddress(Integer addressId)",
+        "http_method": "GET",
+        "path": "/addresses/{addressId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateAddress",
+        "signature": "ResponseEntity<Void> updateAddress(Integer addressId, AddressDto.AddressRequest model)",
+        "http_method": "PUT",
+        "path": "/addresses/{addressId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteAddress",
+        "signature": "ResponseEntity<Void> deleteAddress(Integer addressId)",
+        "http_method": "DELETE",
+        "path": "/addresses/{addressId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getAddressDetails",
+        "signature": "ResponseEntity<AddressDto.AddressResponse> getAddressDetails(Integer addressId)",
+        "http_method": "GET",
+        "path": "/addresses/{addressId}/details",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getCityList",
+        "signature": "ResponseEntity<CollectionModel<CityDto.CityResponse>> getCityList(Pageable pageable)",
+        "http_method": "GET",
+        "path": "/cities",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addCity",
+        "signature": "ResponseEntity<Void> addCity(CityDto.CityRequest model)",
+        "http_method": "POST",
+        "path": "/cities",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getCity",
+        "signature": "ResponseEntity<CityDto.CityResponse> getCity(Integer cityId)",
+        "http_method": "GET",
+        "path": "/cities/{cityId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateCity",
+        "signature": "ResponseEntity<Void> updateCity(Integer cityId, CityDto.CityRequest model)",
+        "http_method": "PUT",
+        "path": "/cities/{cityId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteCity",
+        "signature": "ResponseEntity<Void> deleteCity(Integer cityId)",
+        "http_method": "DELETE",
+        "path": "/cities/{cityId}",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/domain/converter/CountryConverter.java",
+    "class_name": "CountryConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "Integer convertToDatabaseColumn(Country attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "Country convertToEntityAttribute(Integer dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/domain/converter/GeometryConverter.java",
+    "class_name": "GeometryConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "byte[] convertToDatabaseColumn(Point point)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "Point convertToEntityAttribute(byte[] bytes)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/domain/converter/LanguageConverter.java",
+    "class_name": "LanguageConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "Integer convertToDatabaseColumn(Language attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "Language convertToEntityAttribute(Integer dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+    "class_name": "AddressDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@JsonSerialize",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "addressId",
+      "address",
+      "address2",
+      "district",
+      "cityId",
+      "postalCode",
+      "phone",
+      "lastUpdate"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Contains multiple equals/hashCode implementations.",
+    "summary": ""
+  }
+]

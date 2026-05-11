@@ -1,0 +1,328 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+    "class_name": "StoreSalesDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "store",
+      "manager",
+      "totalSales",
+      "storeSales"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+    "class_name": "InventoryEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(InventoryEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "inventoryId",
+      "filmId",
+      "storeId",
+      "lastUpdate",
+      "filmByFilmId",
+      "storeByStoreId"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java",
+    "class_name": "StoreEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(StoreEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "storeId",
+      "managerStaffId",
+      "addressId",
+      "lastUpdate",
+      "staffByManagerStaffId",
+      "addressByAddressId"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/mapper/InventoryMapper.java",
+    "class_name": "InventoryMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping",
+      "@Override"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/mapper/StoreMapper.java",
+    "class_name": "StoreMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/InventoryRepository.java",
+    "class_name": "InventoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/StoreRepository.java",
+    "class_name": "StoreRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepository.java",
+    "class_name": "CustomInventoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepositoryImpl.java",
+    "class_name": "CustomInventoryRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepository.java",
+    "class_name": "CustomStoreRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepositoryImpl.java",
+    "class_name": "CustomStoreRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/service/ReportService.java",
+    "class_name": "ReportService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": ""
+  }
+]

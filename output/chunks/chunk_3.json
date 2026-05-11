@@ -1,0 +1,210 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/domain/entity/AuthorityEntity.java",
+    "class_name": "AuthorityEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@NotNull",
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Table",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Entity",
+      "@GeneratedValue",
+      "@Basic",
+      "@Email",
+      "@Override",
+      "@Serial",
+      "@Size",
+      "@Id",
+      "@AllArgsConstructor",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "authorityId",
+      "email",
+      "password"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Contains multiple fields and custom methods.",
+    "summary": "Entity representing an authority with fields for ID, email, password, and authority roles."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/domain/vo/UserRole.java",
+    "class_name": "UserRole",
+    "layer": "service",
+    "class_type": "enum",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Getter"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple enum with a few constants.",
+    "summary": "Enumeration representing user roles with access rights."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/repository/AuthorityRepository.java",
+    "class_name": "AuthorityRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface extending JpaRepository.",
+    "summary": "Repository interface for AuthorityEntity, including method to find by email."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/service/JpaUserDetailsService.java",
+    "class_name": "JpaUserDetailsService",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "loadUserByUsername",
+        "signature": "public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Loads user details by username."
+      },
+      {
+        "name": "findUser",
+        "signature": "public UserDetails findUser(String email, String password)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Finds user by email and password."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Service with two methods for user detail retrieval.",
+    "summary": "Service for loading user details and validating user credentials."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/auth/service/SecurityService.java",
+    "class_name": "SecurityService",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@Service"
+    ],
+    "methods": [
+      {
+        "name": "authenticateToken",
+        "signature": "public void authenticateToken(UserDetails user, String jwt)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Authenticates the user token."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple service for token authentication.",
+    "summary": "Service for authenticating user tokens."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/assembler/ActorDetailsRepresentationModelAssembler.java",
+    "class_name": "ActorDetailsRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Assembler for ActorDetails representation.",
+    "summary": "Assembler for creating ActorDetails representation models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/assembler/ActorRepresentationModelAssembler.java",
+    "class_name": "ActorRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Assembler class enhancing representation models with links.",
+    "summary": "Assembler for producing Actor representation models with hyperlinks."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/assembler/FilmDetailsRepresentationModelAssembler.java",
+    "class_name": "FilmDetailsRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Assembler for FilmDetails representation.",
+    "summary": "Assembler for creating FilmDetails representation models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/assembler/FilmRepresentationModelAssembler.java",
+    "class_name": "FilmRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Assembler class for film representations with hyperlinks.",
+    "summary": "Assembler for producing Film representation models with hyperlinks."
+  }
+]

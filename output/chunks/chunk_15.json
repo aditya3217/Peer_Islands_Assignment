@@ -1,0 +1,195 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+    "class_name": "PaymentDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "paymentId",
+      "customerId",
+      "staffId",
+      "rentalId",
+      "amount",
+      "paymentDate",
+      "lastUpdate",
+      "customerByCustomerId",
+      "staffByStaffId",
+      "rentalByRentalId"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Contains multiple nested static classes and multiple annotations.",
+    "summary": "Data Transfer Object for payment-related data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+    "class_name": "PaymentEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(PaymentEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Updates the current entity with values from another entity."
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "paymentId",
+      "customerId",
+      "staffId",
+      "rentalId",
+      "amount",
+      "paymentDate",
+      "lastUpdate"
+    ],
+    "complexity_score": 4,
+    "complexity_notes": "Entity with numerous fields and relationships, implementing multiple interfaces.",
+    "summary": "Entity representing the payment details in the database."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/domain/mapper/PaymentMapper.java",
+    "class_name": "PaymentMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple interface with mapping methods.",
+    "summary": "Mapper interface for converting between PaymentEntity and PaymentDto."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/repository/PaymentRepository.java",
+    "class_name": "PaymentRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Basic repository interface extending JpaRepository.",
+    "summary": "Repository interface for PaymentEntity."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepository.java",
+    "class_name": "CustomPaymentRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface defining custom query methods.",
+    "summary": "Custom repository interface for payment details."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepositoryImpl.java",
+    "class_name": "CustomPaymentRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Implementation of custom repository with complex database queries.",
+    "summary": "Implementation of CustomPaymentRepository with query logic."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/payment/service/PaymentService.java",
+    "class_name": "PaymentService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface defining payment service methods.",
+    "summary": "Service interface for payment operations."
+  }
+]

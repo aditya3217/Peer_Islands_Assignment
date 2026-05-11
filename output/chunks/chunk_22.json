@@ -1,0 +1,171 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/service/ReportServiceImpl.java",
+    "class_name": "ReportServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "reportSalesByCategory",
+        "signature": "public List<CategorySalesDto.CategorySales> reportSalesByCategory()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "reportSalesByStore",
+        "signature": "public List<StoreSalesDto.StoreSales> reportSalesByStore()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Contains two public methods.",
+    "summary": "Implementation of ReportService for generating sales reports."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/service/StoreService.java",
+    "class_name": "StoreService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Defines store-related operations.",
+    "summary": "Interface defining service methods for store management."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/service/StoreServiceImpl.java",
+    "class_name": "StoreServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "getStoreList",
+        "signature": "public List<StoreDto.Store> getStoreList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStore",
+        "signature": "public Optional<StoreDto.Store> getStore(Integer storeId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreDetailsList",
+        "signature": "public List<StoreDetailsDto.StoreDetails> getStoreDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreDetails",
+        "signature": "public Optional<StoreDetailsDto.StoreDetails> getStoreDetails(Integer storeId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreStaffList",
+        "signature": "public List<StaffDto.Staff> getStoreStaffList(Integer storeId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreStaff",
+        "signature": "public Optional<StaffDto.Staff> getStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "checkInventoryStock",
+        "signature": "public List<InventoryDto.Inventory> checkInventoryStock(Integer storeId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addStore",
+        "signature": "public StoreDto.Store addStore(StoreDto.StoreRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addStoreStaff",
+        "signature": "public StaffDto.Staff addStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateStore",
+        "signature": "public StoreDto.Store updateStore(Integer storeId, StoreDto.StoreRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateStoreStaff",
+        "signature": "public StaffDto.Staff updateStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteStore",
+        "signature": "public void deleteStore(Integer storeId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "removeStoreStaff",
+        "signature": "public void removeStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Contains several public methods implementing store operations.",
+    "summary": "Implementation of StoreService for managing stores."
+  }
+]

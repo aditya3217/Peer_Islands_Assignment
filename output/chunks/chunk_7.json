@@ -1,0 +1,359 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+    "class_name": "FilmActorEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne",
+      "@IdClass"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(FilmActorEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "actorId",
+      "filmId",
+      "lastUpdate",
+      "actorByActorId",
+      "filmByFilmId"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Contains entity mapping and multiple methods for equality checks.",
+    "summary": "Entity representing the many-to-many relationship between films and actors."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntityPK.java",
+    "class_name": "FilmActorEntityPK",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@GeneratedValue",
+      "@Override",
+      "@Serial",
+      "@Id",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "actorId",
+      "filmId"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "Simple primary key class with equals and hashcode methods.",
+    "summary": "Primary key class for FilmActorEntity representing composite key."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+    "class_name": "FilmCategoryEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Convert",
+      "@ToString",
+      "@Table",
+      "@GeneratedValue",
+      "@ManyToOne",
+      "@IdClass"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(FilmCategoryEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "categoryId",
+      "lastUpdate",
+      "filmByFilmId",
+      "categoryByCategoryId"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Includes multiple fields with complex relationships.",
+    "summary": "Entity representing the many-to-many relationship between films and categories."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntityPK.java",
+    "class_name": "FilmCategoryEntityPK",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@GeneratedValue",
+      "@Override",
+      "@Id",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "categoryId"
+    ],
+    "complexity_score": 1,
+    "complexity_notes": "Simple primary key class for film-category relationship.",
+    "summary": "Primary key class for FilmCategoryEntity representing composite key."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+    "class_name": "FilmEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Size",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Convert",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(FilmEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "title",
+      "description",
+      "releaseYear",
+      "languageId",
+      "originalLanguageId",
+      "rentalDuration",
+      "rentalRate",
+      "length",
+      "replacementCost",
+      "rating",
+      "lastUpdate",
+      "languageByLanguageId",
+      "languageByOriginalLanguageId"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Complex entity with multiple fields and relationships.",
+    "summary": "Entity representing films with various attributes and relationships."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+    "class_name": "FilmTextEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@NotNull",
+      "@Getter",
+      "@Table",
+      "@ToString",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Entity",
+      "@GeneratedValue",
+      "@Basic",
+      "@Override",
+      "@Index",
+      "@Serial",
+      "@Size",
+      "@Id",
+      "@AllArgsConstructor",
+      "@Column"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(FilmTextEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "filmId",
+      "title",
+      "description"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Entity with basic attributes for film text.",
+    "summary": "Entity representing text information related to films."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/mapper/ActorMapper.java",
+    "class_name": "ActorMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping",
+      "@Override"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface primarily for mapping without complex logic.",
+    "summary": "Mapper interface for converting ActorEntity to ActorDto and vice versa."
+  }
+]

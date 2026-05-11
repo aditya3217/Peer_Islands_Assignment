@@ -1,0 +1,310 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+    "class_name": "ActorController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@RequestParam",
+      "@PutMapping",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "getActorList",
+        "signature": "public ResponseEntity<CollectionModel<ActorDto.ActorResponse>> getActorList(Pageable pageable)",
+        "http_method": "GET",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActor",
+        "signature": "public ResponseEntity<Void> addActor(ActorDto.ActorRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActor",
+        "signature": "public ResponseEntity<ActorDto.ActorResponse> getActor(Integer actorId)",
+        "http_method": "GET",
+        "path": "/{actorId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateActor",
+        "signature": "public ResponseEntity<Void> updateActor(Integer actorId, ActorDto.ActorRequest model)",
+        "http_method": "PUT",
+        "path": "/{actorId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteActor",
+        "signature": "public ResponseEntity<Void> deleteActor(Integer actorId)",
+        "http_method": "DELETE",
+        "path": "/{actorId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorDetails",
+        "signature": "public ResponseEntity<ActorDetailsDto.ActorDetailsResponse> getActorDetails(Integer actorId)",
+        "http_method": "GET",
+        "path": "/{actorId}/details",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmList",
+        "signature": "public ResponseEntity<CollectionModel<FilmDto.FilmResponse>> getActorFilmList(Integer actorId, String category, String releaseYear, String rating, Pageable pageable)",
+        "http_method": "GET",
+        "path": "/{actorId}/films",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addActorFilm",
+        "signature": "public ResponseEntity<Void> addActorFilm(Integer actorId, Map<String, String> input)",
+        "http_method": "POST",
+        "path": "/{actorId}/films",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilm",
+        "signature": "public ResponseEntity<FilmDto.FilmResponse> getActorFilm(Integer actorId, Integer filmId)",
+        "http_method": "GET",
+        "path": "/{actorId}/films/{filmId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteActorFilm",
+        "signature": "public ResponseEntity<Void> deleteActorFilm(Integer actorId, Integer filmId)",
+        "http_method": "DELETE",
+        "path": "/{actorId}/films/{filmId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getActorFilmDetails",
+        "signature": "public ResponseEntity<FilmDetailsDto.FilmDetailsResponse> getActorFilmDetails(Integer actorId, Integer filmId)",
+        "http_method": "GET",
+        "path": "/{actorId}/films/{filmId}/details",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "searchActorByName",
+        "signature": "public ResponseEntity<CollectionModel<ActorDto.ActorResponse>> searchActorByName(Map<String, String> input)",
+        "http_method": "POST",
+        "path": "/search",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Class contains multiple methods that handle user roles and HTTP requests.",
+    "summary": "Handles CRUD operations for actors and their films."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+    "class_name": "FilmController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@RequestParam",
+      "@PutMapping",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "getFilmList",
+        "signature": "public ResponseEntity<CollectionModel<FilmDto.FilmResponse>> getFilmList(String category, String releaseYear, String rating, Pageable pageable)",
+        "http_method": "GET",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addFilm",
+        "signature": "public ResponseEntity<Void> addFilm(FilmDto.FilmRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilm",
+        "signature": "public ResponseEntity<FilmDto.FilmResponse> getFilm(Integer filmId)",
+        "http_method": "GET",
+        "path": "/{filmId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateFilm",
+        "signature": "public ResponseEntity<Void> updateFilm(Integer filmId, FilmDto.FilmRequest model)",
+        "http_method": "PUT",
+        "path": "/{filmId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteFilm",
+        "signature": "public ResponseEntity<Void> deleteFilm(Integer filmId)",
+        "http_method": "DELETE",
+        "path": "/{filmId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActorList",
+        "signature": "public ResponseEntity<CollectionModel<ActorDto.ActorResponse>> getFilmActorList(Integer filmId, Pageable pageable)",
+        "http_method": "GET",
+        "path": "/{filmId}/actors",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmActor",
+        "signature": "public ResponseEntity<ActorDto.ActorResponse> getFilmActor(Integer filmId, Integer actorId)",
+        "http_method": "GET",
+        "path": "/{filmId}/actors/{actorId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getFilmDetails",
+        "signature": "public ResponseEntity<FilmDetailsDto.FilmDetailsResponse> getFilmDetails(Integer filmId)",
+        "http_method": "GET",
+        "path": "/{filmId}/details",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Class handles various operations related to films with multiple methods.",
+    "summary": "Handles CRUD operations for films and associated actors."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/converter/CategoryConverter.java",
+    "class_name": "CategoryConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "public Integer convertToDatabaseColumn(Category attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "public Category convertToEntityAttribute(Integer dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple converter class with straightforward methods.",
+    "summary": "Converts Category attribute to and from database representation."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/converter/FilmRatingConverter.java",
+    "class_name": "FilmRatingConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "public String convertToDatabaseColumn(FilmRating attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "public FilmRating convertToEntityAttribute(String dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple converter class with straightforward methods.",
+    "summary": "Converts FilmRating attribute to and from database representation."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/converter/SpecialFeatureConverter.java",
+    "class_name": "SpecialFeatureConverter",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Converter",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "convertToDatabaseColumn",
+        "signature": "public String convertToDatabaseColumn(EnumSet<SpecialFeature> attribute)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "convertToEntityAttribute",
+        "signature": "public EnumSet<SpecialFeature> convertToEntityAttribute(String dbData)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple converter class with straightforward methods.",
+    "summary": "Converts SpecialFeature attribute to and from database representation."
+  }
+]

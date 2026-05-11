@@ -1,0 +1,330 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/controller/StaffController.java",
+    "class_name": "StaffController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@PutMapping",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "getStaffList",
+        "signature": "public ResponseEntity<CollectionModel<StaffDto.StaffResponse>> getStaffList(Pageable pageable)",
+        "http_method": "GET",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addStaff",
+        "signature": "public ResponseEntity<Void> addStaff(StaffDto.StaffRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStaff",
+        "signature": "public ResponseEntity<StaffDto.StaffResponse> getStaff(Integer staffId)",
+        "http_method": "GET",
+        "path": "/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateStaff",
+        "signature": "public ResponseEntity<Void> updateStaff(Integer staffId, StaffDto.StaffRequest model)",
+        "http_method": "PUT",
+        "path": "/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteStaff",
+        "signature": "public ResponseEntity<Void> deleteStaff(Integer staffId)",
+        "http_method": "DELETE",
+        "path": "/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStaffDetails",
+        "signature": "public ResponseEntity<StaffDetailsDto.StaffDetailsResponse> getStaffDetails(Integer staffId)",
+        "http_method": "GET",
+        "path": "/{staffId}/details",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "The class has multiple HTTP methods with varying complexity.",
+    "summary": "Controller for managing staff."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+    "class_name": "StaffDetailsDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "id",
+      "name",
+      "address",
+      "zipCode",
+      "phone",
+      "city",
+      "country",
+      "sid",
+      "staffDetails"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "The class includes static nested classes to manage staff details.",
+    "summary": "Data transfer object for staff details."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+    "class_name": "StaffDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Size",
+      "@JsonTypeInfo",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "staffId",
+      "fullName",
+      "addressId",
+      "storeId",
+      "active",
+      "username",
+      "authorityId",
+      "lastUpdate",
+      "firstName",
+      "lastName"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "The class contains multiple nested static classes for various DTOs.",
+    "summary": "Data transfer object for staff."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+    "class_name": "StaffEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Size",
+      "@Embedded",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(StaffEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "staffId",
+      "fullName",
+      "addressId",
+      "storeId",
+      "active",
+      "username",
+      "authorityId",
+      "lastUpdate"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Entity with several fields and relationships, includes update logic.",
+    "summary": "Entity for staff with JPA annotations."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/domain/mapper/StaffMapper.java",
+    "class_name": "StaffMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping",
+      "@Override"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface with mapping methods, no complex logic.",
+    "summary": "Mapper interface for converting between StaffEntity and StaffDto."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/repository/StaffRepository.java",
+    "class_name": "StaffRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Repository interface extending JpaRepository, no extra methods.",
+    "summary": "Repository interface for Staff entities."
+  }
+]

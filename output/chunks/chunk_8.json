@@ -1,0 +1,298 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/mapper/FilmMapper.java",
+    "class_name": "FilmMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Mapper",
+      "@Mapping",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "mapToDto",
+        "signature": "FilmDto.Film mapToDto(FilmEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "mapToEntity",
+        "signature": "FilmEntity mapToEntity(FilmDto.FilmRequest dto)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 5,
+    "complexity_notes": "Contains multiple mapping functions with complex expressions.",
+    "summary": "Mapper interface for converting between FilmEntity and FilmDto."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+    "class_name": "LocalDateYearSerializer",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Serial",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "withFormat",
+        "signature": "protected LocalDateYearSerializer withFormat(Boolean useTimestamp, DateTimeFormatter dtf, JsonFormat.Shape shape)",
+        "http_method": null,
+        "path": null,
+        "visibility": "protected",
+        "description": ""
+      },
+      {
+        "name": "serialize",
+        "signature": "public void serialize(LocalDate date, JsonGenerator gen, SerializerProvider provider) throws IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "serializeWithType",
+        "signature": "public void serializeWithType(LocalDate value, JsonGenerator gen, SerializerProvider provider, TypeSerializer typeSer) throws IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "_serializeAsArrayContents",
+        "signature": "protected void _serializeAsArrayContents(LocalDate value, JsonGenerator gen, SerializerProvider provider) throws IOException",
+        "http_method": null,
+        "path": null,
+        "visibility": "protected",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Complex serialization logic with multiple overloads.",
+    "summary": "Custom serializer for LocalDate with year format handling."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/ActorRepository.java",
+    "class_name": "ActorRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing ActorEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/CategoryRepository.java",
+    "class_name": "CategoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing CategoryEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/FilmActorRepository.java",
+    "class_name": "FilmActorRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing FilmActorEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/FilmCategoryRepository.java",
+    "class_name": "FilmCategoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing FilmCategoryEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/FilmRepository.java",
+    "class_name": "FilmRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing FilmEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/FilmTextRepository.java",
+    "class_name": "FilmTextRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Repository interface for accessing FilmTextEntity data."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepository.java",
+    "class_name": "CustomActorRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Custom repository interface for Actor with specialized methods."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepositoryImpl.java",
+    "class_name": "CustomActorRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "removeActorFilm",
+        "signature": "public void removeActorFilm(Integer actorId, Integer filmId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Implements custom logic for managing actor films.",
+    "summary": "Implementation of CustomActorRepository with query methods."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepository.java",
+    "class_name": "CustomCategoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Custom repository interface for Category."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepositoryImpl.java",
+    "class_name": "CustomCategoryRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Implementation of CustomCategoryRepository."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepository.java",
+    "class_name": "CustomFilmActorRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Custom repository interface for FilmActor."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepositoryImpl.java",
+    "class_name": "CustomFilmActorRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Implementation of CustomFilmActorRepository."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepository.java",
+    "class_name": "CustomFilmCategoryRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Custom repository interface for FilmCategory."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepositoryImpl.java",
+    "class_name": "CustomFilmCategoryRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "",
+    "summary": "Implementation of CustomFilmCategoryRepository."
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+    "class_name": "RentalEntity",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Getter",
+      "@Override",
+      "@Index",
+      "@Builder",
+      "@Entity",
+      "@Basic",
+      "@Id",
+      "@AllArgsConstructor",
+      "@NoArgsConstructor",
+      "@UpdateTimestamp",
+      "@Serial",
+      "@JoinColumn",
+      "@Column",
+      "@NotNull",
+      "@ColumnDefault",
+      "@Table",
+      "@ToString",
+      "@GeneratedValue",
+      "@ManyToOne"
+    ],
+    "methods": [
+      {
+        "name": "update",
+        "signature": "public void update(RentalEntity entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "rentalId",
+      "rentalDate",
+      "inventoryId",
+      "customerId",
+      "returnDate",
+      "staffId",
+      "lastUpdate",
+      "inventoryByInventoryId",
+      "customerByCustomerId",
+      "staffByStaffId"
+    ],
+    "complexity_score": 3,
+    "complexity_notes": "Contains multiple fields and complex methods.",
+    "summary": "Represents the Rental entity in the database."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/domain/mapper/RentalMapper.java",
+    "class_name": "RentalMapper",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@IterableMapping",
+      "@Mapper",
+      "@Override",
+      "@Mapping",
+      "@DoMapping"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Interface with mapping methods, low complexity.",
+    "summary": "Maps Rental entities to Rental DTOs."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/domain/vo/RentalStatus.java",
+    "class_name": "RentalStatus",
+    "layer": "service",
+    "class_type": "enum",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Simple enum definition.",
+    "summary": "Represents the status of a rental."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/repository/RentalRepository.java",
+    "class_name": "RentalRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [
+      "@Repository"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Standard repository interface.",
+    "summary": "Repository interface for accessing Rental entities."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepository.java",
+    "class_name": "CustomRentalRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Includes a specific query method.",
+    "summary": "Custom repository interface for Rental functionality."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepositoryImpl.java",
+    "class_name": "CustomRentalRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "findRentedDvdRentalId",
+        "signature": "public RentalEntity findRentedDvdRentalId(Integer customerId, Integer inventoryId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Contains a custom database query.",
+    "summary": "Implementation of CustomRentalRepository interface."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/service/RentalService.java",
+    "class_name": "RentalService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Defines various rental management methods.",
+    "summary": "Service interface for managing Rentals."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/rental/service/RentalServiceImpl.java",
+    "class_name": "RentalServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "getOverdueRentalList",
+        "signature": "public BigDecimal getOverdueRentalList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getOverdueRental",
+        "signature": "public BigDecimal getOverdueRental(Integer customerId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteRental",
+        "signature": "public void deleteRental(Integer rentalId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 4,
+    "complexity_notes": "Contains business logic for various rental operations.",
+    "summary": "Implementation of RentalService managing rentals."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/assembler/StaffDetailsRepresentationModelAssembler.java",
+    "class_name": "StaffDetailsRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Assembler for converting StaffDetails DTOs to models.",
+    "summary": "Converts StaffDetails DTOs to Representation Models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/assembler/StaffRepresentationModelAssembler.java",
+    "class_name": "StaffRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [],
+    "http_mappings": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "Assembler for converting Staff DTOs to models.",
+    "summary": "Converts Staff DTOs to Representation Models."
+  }
+]

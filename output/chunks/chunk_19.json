@@ -1,0 +1,300 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepository.java",
+    "class_name": "CustomStaffRepository",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "No methods implemented.",
+    "summary": "Interface for custom staff repository."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepositoryImpl.java",
+    "class_name": "CustomStaffRepositoryImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Repository",
+      "@Override",
+      "@RequiredArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "findAllStaffDetailsList",
+        "signature": "List<StaffDetailsDto.StaffDetails> findAllStaffDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Fetch all staff details."
+      },
+      {
+        "name": "findStaffDetailsById",
+        "signature": "Optional<StaffDetailsDto.StaffDetails> findStaffDetailsById(Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Fetch staff details by ID."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Complex query logic in the implementation methods.",
+    "summary": "Implementation of CustomStaffRepository interface."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/service/StaffService.java",
+    "class_name": "StaffService",
+    "layer": "service",
+    "class_type": "interface",
+    "annotations": [],
+    "methods": [],
+    "dependencies": [],
+    "complexity_score": 1,
+    "complexity_notes": "No methods implemented.",
+    "summary": "Interface for staff service operations."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/staff/service/StaffServiceImpl.java",
+    "class_name": "StaffServiceImpl",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Transactional",
+      "@RequiredArgsConstructor",
+      "@Service",
+      "@Override"
+    ],
+    "methods": [
+      {
+        "name": "getStaffList",
+        "signature": "List<StaffDto.Staff> getStaffList(Pageable pageable)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Get a paginated list of staff."
+      },
+      {
+        "name": "getStaff",
+        "signature": "Optional<StaffDto.Staff> getStaff(Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Get staff details by ID."
+      },
+      {
+        "name": "getStaffDetailsList",
+        "signature": "List<StaffDetailsDto.StaffDetails> getStaffDetailsList()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Get a list of staff details."
+      },
+      {
+        "name": "getStaffDetails",
+        "signature": "Optional<StaffDetailsDto.StaffDetails> getStaffDetails(Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Get staff details by ID."
+      },
+      {
+        "name": "addStaff",
+        "signature": "StaffDto.Staff addStaff(StaffDto.StaffRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Add a new staff member."
+      },
+      {
+        "name": "updateStaff",
+        "signature": "StaffDto.Staff updateStaff(Integer staffId, StaffDto.StaffRequest model)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Update an existing staff member."
+      },
+      {
+        "name": "removeStaff",
+        "signature": "void removeStaff(Integer staffId)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Remove a staff member."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Transactional operations with exception handling.",
+    "summary": "Implementation of StaffService for staff-related business logic."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/assembler/CategorySalesRepresentationModelAssembler.java",
+    "class_name": "CategorySalesRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [
+      {
+        "name": "toModel",
+        "signature": "CategorySalesDto.CategorySalesResponse toModel(@NonNull CategorySalesDto.CategorySales entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert CategorySales entity to response model."
+      },
+      {
+        "name": "toCollectionModel",
+        "signature": "CollectionModel<CategorySalesDto.CategorySalesResponse> toCollectionModel(@NonNull Iterable<? extends CategorySalesDto.CategorySales> entities)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert a collection of CategorySales entities to response models."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Mapping logic involved.",
+    "summary": "Assembler for transforming CategorySales entities to response models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/assembler/StoreDetailsRepresentationModelAssembler.java",
+    "class_name": "StoreDetailsRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [
+      {
+        "name": "toModel",
+        "signature": "StoreDetailsDto.StoreDetailsResponse toModel(@NonNull StoreDetailsDto.StoreDetails entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert StoreDetails entity to response model."
+      },
+      {
+        "name": "toCollectionModel",
+        "signature": "CollectionModel<StoreDetailsDto.StoreDetailsResponse> toCollectionModel(@NonNull Iterable<? extends StoreDetailsDto.StoreDetails> entities)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert a collection of StoreDetails entities to response models."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Mapping logic involved.",
+    "summary": "Assembler for transforming StoreDetails entities to response models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/assembler/StoreRepresentationModelAssembler.java",
+    "class_name": "StoreRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [
+      {
+        "name": "toModel",
+        "signature": "StoreDto.StoreResponse toModel(@NonNull StoreDto.Store entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert Store entity to response model."
+      },
+      {
+        "name": "toCollectionModel",
+        "signature": "CollectionModel<StoreDto.StoreResponse> toCollectionModel(@NonNull Iterable<? extends StoreDto.Store> entities)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert a collection of Store entities to response models."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Mapping logic involved.",
+    "summary": "Assembler for transforming Store entities to response models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/assembler/StoreSalesRepresentationModelAssembler.java",
+    "class_name": "StoreSalesRepresentationModelAssembler",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Component",
+      "@Override",
+      "@NonNull"
+    ],
+    "methods": [
+      {
+        "name": "toModel",
+        "signature": "StoreSalesDto.StoreSalesResponse toModel(@NonNull StoreSalesDto.StoreSales entity)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert StoreSales entity to response model."
+      },
+      {
+        "name": "toCollectionModel",
+        "signature": "CollectionModel<StoreSalesDto.StoreSalesResponse> toCollectionModel(@NonNull Iterable<? extends StoreSalesDto.StoreSales> entities)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": "Convert a collection of StoreSales entities to response models."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Mapping logic involved.",
+    "summary": "Assembler for transforming StoreSales entities to response models."
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/controller/ReportController.java",
+    "class_name": "ReportController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "reportSalesByCategory",
+        "signature": "ResponseEntity<CollectionModel<CategorySalesDto.CategorySalesResponse>> reportSalesByCategory()",
+        "http_method": "GET",
+        "path": "/sales/categories",
+        "visibility": "public",
+        "description": "Report sales by category."
+      },
+      {
+        "name": "reportSalesByStore",
+        "signature": "ResponseEntity<CollectionModel<StoreSalesDto.StoreSalesResponse>> reportSalesByStore()",
+        "http_method": "GET",
+        "path": "/sales/stores",
+        "visibility": "public",
+        "description": "Report sales by store."
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 2,
+    "complexity_notes": "Handles sales reporting with secured access.",
+    "summary": "Controller for reporting sales data."
+  }
+]

@@ -1,0 +1,307 @@
+[
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/controller/StoreController.java",
+    "class_name": "StoreController",
+    "layer": "controller",
+    "class_type": "class",
+    "annotations": [
+      "@RequestBody",
+      "@PathVariable",
+      "@DeleteMapping",
+      "@PageableDefault",
+      "@PutMapping",
+      "@ModelAttribute",
+      "@RequiredArgsConstructor",
+      "@RequestMapping",
+      "@RestController",
+      "@GetMapping",
+      "@PostMapping",
+      "@Secured"
+    ],
+    "methods": [
+      {
+        "name": "getStoreList",
+        "signature": "public ResponseEntity<CollectionModel<StoreDto.StoreResponse>> getStoreList(Pageable pageable)",
+        "http_method": "GET",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addStore",
+        "signature": "public ResponseEntity<Void> addStore(StoreDto.StoreRequest model)",
+        "http_method": "POST",
+        "path": "",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStore",
+        "signature": "public ResponseEntity<StoreDto.StoreResponse> getStore(Integer storeId)",
+        "http_method": "GET",
+        "path": "/{storeId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateStore",
+        "signature": "public ResponseEntity<Void> updateStore(Integer storeId, StoreDto.StoreRequest model)",
+        "http_method": "PUT",
+        "path": "/{storeId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteStore",
+        "signature": "public ResponseEntity<Void> deleteStore(Integer storeId)",
+        "http_method": "DELETE",
+        "path": "/{storeId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreStaffList",
+        "signature": "public ResponseEntity<CollectionModel<StaffDto.StaffResponse>> getStoreStaffList(Integer storeId)",
+        "http_method": "GET",
+        "path": "/{storeId}/staffs",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreStaff",
+        "signature": "public ResponseEntity<StaffDto.StaffResponse> getStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": "GET",
+        "path": "/{storeId}/staffs/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "addStoreStaff",
+        "signature": "public ResponseEntity<Void> addStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": "POST",
+        "path": "/{storeId}/staffs/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "updateStoreStaff",
+        "signature": "public ResponseEntity<Void> updateStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": "PUT",
+        "path": "/{storeId}/staffs/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "deleteStoreStaff",
+        "signature": "public ResponseEntity<Void> deleteStoreStaff(Integer storeId, Integer staffId)",
+        "http_method": "DELETE",
+        "path": "/{storeId}/staffs/{staffId}",
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "getStoreDetails",
+        "signature": "public ResponseEntity<StoreDetailsDto.StoreDetailsResponse> getStoreDetails(Integer storeId)",
+        "http_method": "GET",
+        "path": "/{storeId}/details",
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [],
+    "complexity_score": 3,
+    "complexity_notes": "Class has multiple methods with different HTTP methods making it complex.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+    "class_name": "CategorySalesDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@Convert",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "category",
+      "totalSales",
+      "categorySales"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Class contains complex methods like equals and hashCode.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/dto/InventoryDto.java",
+    "class_name": "InventoryDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@AllArgsConstructor"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "inventoryId",
+      "filmId",
+      "storeId",
+      "lastUpdate"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Class contains complex methods like equals and hashCode.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+    "class_name": "StoreDetailsDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "id",
+      "store",
+      "manager",
+      "address",
+      "storeDetails"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Class contains complex methods like equals and hashCode.",
+    "summary": ""
+  },
+  {
+    "file_path": "./data/spring-rest-sakila/src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+    "class_name": "StoreDto",
+    "layer": "service",
+    "class_type": "class",
+    "annotations": [
+      "@JsonIgnore",
+      "@ToString",
+      "@Getter",
+      "@Builder",
+      "@NoArgsConstructor",
+      "@Override",
+      "@Setter",
+      "@Serial",
+      "@JsonProperty",
+      "@FieldNameConstants",
+      "@Relation",
+      "@AllArgsConstructor",
+      "@JsonUnwrapped"
+    ],
+    "methods": [
+      {
+        "name": "equals",
+        "signature": "public boolean equals(Object o)",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      },
+      {
+        "name": "hashCode",
+        "signature": "public int hashCode()",
+        "http_method": null,
+        "path": null,
+        "visibility": "public",
+        "description": ""
+      }
+    ],
+    "dependencies": [
+      "storeId",
+      "managerStaffId",
+      "addressId",
+      "lastUpdate",
+      "managerStaffId",
+      "addressId",
+      "store"
+    ],
+    "complexity_score": 2,
+    "complexity_notes": "Class contains complex methods like equals and hashCode.",
+    "summary": ""
+  }
+]
